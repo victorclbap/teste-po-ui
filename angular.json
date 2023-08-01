@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "funcionapf": {
+    "teste-po-ui": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/funcionapf",
+            "outputPath": "dist/teste-po-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "funcionapf:build:production"
+              "browserTarget": "teste-po-ui:build:production"
             },
             "development": {
-              "browserTarget": "funcionapf:build:development"
+              "browserTarget": "teste-po-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "funcionapf:build"
+            "browserTarget": "teste-po-ui:build"
           }
         },
         "test": {
@@ -87,6 +88,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
               "src/styles.css"
             ],
             "scripts": []

@@ -1,0 +1,6 @@
+<po-page-default p-title="PO Page Default">
+  <app-filter  (dataSearched)="dataSearched($event)"  (clearSearch)="clearSearch()" >
+    <!-- <po-input class="po-md-6"></po-input> -->
+  </app-filter>
+  <app-table [data]="heroes$"></app-table>
+</po-page-default>

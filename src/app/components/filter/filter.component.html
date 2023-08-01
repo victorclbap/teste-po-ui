@@ -1,0 +1,25 @@
+<div class="po-md-12">
+  <!-- <ng-content></ng-content> -->
+  <form [formGroup]="formFilter" (ngSubmit)="submitForm()">
+  <po-input class="po-md-6" name="input" formControlName="input"></po-input>
+  <po-button
+    class="po-md-3 po-mt-1"
+    p-type="danger"
+    p-label="Clear"
+    p-icon="po-icon po-icon-delete"
+    (p-click)="clear()"
+  >
+  </po-button>
+  <po-button
+    class="po-md-3 po-mt-1"
+    p-icon="po-icon po-icon-search"
+    p-label="Search"
+    (p-click)="submitForm()"
+  >
+  </po-button>
+</form>
+</div>
+
+<po-loading-overlay
+*ngIf="loading"
+></po-loading-overlay>
